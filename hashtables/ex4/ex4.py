@@ -1,8 +1,13 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    nums = {}
+    result = []
+
+    for num in a:
+        # print(f'nums: {nums}')
+        if (num) in nums:
+            result.append(abs(num))
+        else:
+            nums[num * -1] = num
 
     return result
 

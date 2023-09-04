@@ -6,9 +6,15 @@ class Ticket:
 
 
 def reconstruct_trip(tickets, length):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    flights = {}
 
+    for tic in tickets:
+        flights[tic.source] = tic.destination
+    print(flights)
+
+    current = "NONE"
+    route = []
+    for i in range(0, length):
+        route.append(flights[current])
+        current = flights[current]
     return route
